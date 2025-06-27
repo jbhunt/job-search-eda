@@ -75,6 +75,13 @@ class SalaryRangeFigure():
                 alpha=0.15,
                 edgecolor='none',
             )
+
+            # Vertical lines
+            x3 = np.nanmean((x2 - x1) / 2 + x1)
+            ax.vlines(x3, y - 0.5, y + len(x1) - 0.5,
+                color=cmap(i),
+                alpha=0.15
+            )
             
             # Markers
             for ii in np.argsort(salary_data[:, 0]):
@@ -82,10 +89,13 @@ class SalaryRangeFigure():
                 ax.scatter([x1, x2], [y, y], color=cmap(i), s=5)
                 y += 1
 
+        ylim = ax.get_ylim()
+        ax.vlines(38110, *ylim, color='k', alpha=0.15)
+        ax.set_ylim(ylim)
         ax.set_xlim([0, ax.get_xlim()[1]])
-        ax.set_xticklabels(ax.get_xticks() / 1000)
+        ax.set_xticklabels(np.array(ax.get_xticks() / 1000).astype(int))
         ax.set_xlabel('Salary (K)')
-        ax.set_ylabel('Opportunity #')
+        ax.set_ylabel('Job #')
         ax.legend(
             loc="center left",
             bbox_to_anchor=(1, 0.5),
