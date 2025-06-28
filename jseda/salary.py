@@ -77,12 +77,12 @@ class SalaryRangeFigure():
             )
 
             # Vertical lines
-            x3 = np.nanmean((x2 - x1) / 2 + x1)
-            ax.vlines(x3, y - 0.5, y + len(x1) - 0.5,
-                color=cmap(i),
-                alpha=0.15
-            )
-            
+            # x3 = np.nanmean((x2 - x1) / 2 + x1)
+            # ax.vlines(x3, y - 0.5, y + len(x1) - 0.5,
+            #     color=cmap(i),
+            #     alpha=0.15
+            # )
+                       
             # Markers
             for ii in np.argsort(salary_data[:, 0]):
                 x1, x2 = salary_data[ii, :]
