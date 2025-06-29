@@ -6,3 +6,15 @@ Between November 11, 2024 and June 27, 2025, I applied to 45 jobs that listed at
 <p align="center">
   <img src="docs/imgs/salary_ranges.png" width="500" alt="Animated demo">
 </p>
+
+# Outcome
+For the 48 job applications I submitted, I recorded whether I was able to convert these applications into invitations to interview. I was interested in understanding what factors influenced my "success" in converting my applications to interviews, so I used logistic regression to estimate the effect of these factors:
+- Referral: Did I have a personal connection that referred me for the job, yes (1) or no (0)
+- Industry: Was the job in a non-academic (0) or academic setting (1)
+- Pay minimum: Minmum listed salary (Normalized 0-1)
+- Pay maximum: Maximum listed salary (Normalize 0-1)
+Here are the odds ratios and 95% confidence intervals for each of the factors:
+<p align="center">
+  <img src="docs/imgs/regression_coefficients.png" width="700" alt="Animated demo">
+</p>
+The factor with the greatest odds ratio was "Referral;" I was more likely to get an invitation to interview if I had a personal connection to the job. I was also more likely to get an interview for jobs in academic settings. And finally, it seems like I was less likely to get interviews the greater the minimum and maximum salary.
