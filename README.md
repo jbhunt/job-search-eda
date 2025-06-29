@@ -9,12 +9,15 @@ Between November 11, 2024 and June 27, 2025, I applied to 45 jobs that listed at
 
 # Outcome
 For the 48 job applications I submitted, I recorded whether I was able to convert these applications into invitations to interview. I was interested in understanding what factors influenced my "success" in converting my applications to interviews, so I used logistic regression to quantify the effect of the following factors:
-- Referral: Did I have a personal connection that referred me for the job, yes (1) or no (0)
-- Industry: Was the job in a non-academic (0) or an academic setting (1)
-- Pay minimum: Minmum listed salary (Normalized 0-1)
-- Pay maximum: Maximum listed salary (Normalize 0-1)
+- `Referral`: Did I have a personal connection that referred me for the job, yes (1) or no (0)
+- `Industry`: Was the job in a non-academic (0) or an academic setting (1)
+- `Pay minimum`: Minmum listed salary (Normalized 0-1)
+- `Pay maximum`: Maximum listed salary (Normalize 0-1)
 
 Here are the odds ratios (OR) and 95% confidence intervals (CI) for each of the factors listed above. ORs of less than 1 indicate that the factor negatively impacted my applications, ORs equal to 1 indicate the factor had no impact, and ORs greater than 1 indicated that the factor positively influenced my applications.
+
+<p align="center">
   <img src="docs/imgs/regression_coefficients.png" width="700" alt="Animated demo">
 </p>
-The factor with the greatest OR was "Referral." I was more likely to get an invitation to interview if I had a personal connection to the job. I was also more likely to get an interview for jobs in academic settings. And finally, it seems like I was less likely to get interviews the greater the minimum and maximum salary.
+
+The factor with the greatest OR was `Referral`. I was more likely to get an invitation to interview if I had a personal connection to the job. The factor with the second greates OR was `Industry`. I was more likely to get an interview for jobs in academic settings. And finally, it seems like I was less likely to get interviews the greater the minimum and maximum salary.
