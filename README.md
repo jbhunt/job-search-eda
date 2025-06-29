@@ -13,7 +13,7 @@ For the 48 job applications I submitted, I recorded whether I was able to conver
 - Industry: Was the job in a non-academic (0) or academic setting (1)
 - Pay minimum: Minmum listed salary (Normalized 0-1)
 - Pay maximum: Maximum listed salary (Normalize 0-1)
-Here are the odds ratios and 95% confidence intervals for each of the factors:
+Here are the odds ratios and 95% confidence intervals for each of the factors. Odds ratios of less than 1 indicate lower odds of converting applicaitons to interviews and odds ratios greater than 1 indicate higher odds of converting applications to interviews. 
 <p align="center">
   <img src="docs/imgs/regression_coefficients.png" width="700" alt="Animated demo">
 </p>
