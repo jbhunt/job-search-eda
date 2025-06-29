@@ -14,7 +14,7 @@ For the 48 job applications I submitted, I recorded whether I was able to conver
 - `Pay minimum`: Minmum listed salary (Normalized 0-1)
 - `Pay maximum`: Maximum listed salary (Normalize 0-1)
 
-Here are the odds ratios (OR) and 95% confidence intervals (CI) for each of the factors listed above. ORs of less than 1 indicate that the factor negatively impacted my applications, ORs equal to 1 indicate the factor had no impact, and ORs greater than 1 indicated that the factor positively influenced my applications.
+Here are the odds ratios (OR) and 95% confidence intervals (CI) for each of the factors listed above. ORs of less than 1 indicate that the factor negatively impacted my applications, ORs equal to 1 (black dotted line) indicate the factor had no impact, and ORs greater than 1 indicated that the factor positively influenced my applications.
 
 <p align="center">
   <img src="docs/imgs/regression_coefficients.png" width="700" alt="Animated demo">
