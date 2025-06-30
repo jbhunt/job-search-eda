@@ -14,10 +14,10 @@ For the 48 job applications I submitted, I recorded whether I was able to conver
 - `Pay minimum`: Minmum listed salary (Normalized 0-1)
 - `Pay maximum`: Maximum listed salary (Normalize 0-1)
 
-Here are the odds ratios (OR) and 95% confidence intervals (CI) for each of the factors listed above. ORs of less than 1 indicate that the factor negatively impacted my applications, ORs equal to 1 (black dotted line) indicate the factor had no impact, and ORs greater than 1 indicated that the factor positively influenced my applications.
+Here are the odds ratios (OR) and 95% confidence intervals (CI) for each of the factors listed above. ORs of less than 1 indicate that increases in the associated factor decreased my odds of getting an interview, ORs equal to 1 (black dotted line) indicate the factor had no impact on the outcome of my applications, and ORs greater than 1 indicated that increases in the associated factor increased the odds of me getting an interview.
 
 <p align="center">
   <img src="docs/imgs/regression_coefficients.png" width="700" alt="Animated demo">
 </p>
 
-The factor with the greatest OR was `Referral`. I was more likely to get an invitation to interview if I had a personal connection to the job. The factor with the second greates OR was `Industry`. I was more likely to get an interview for jobs in academic settings. And finally, it seems like I was less likely to get interviews the greater the minimum and maximum salary.
+The factor with the greatest OR was `Referral`. The odds of me getting an invitation to interview were greater if I had a personal connection to the job. The factor with the second greates OR was `Industry`. My odds of getting an interview were greatest for jobs in an academic setting. And finally, it seems like the greater the minimum and maximum salaries the lower the odds of my application being converted into an interview.
