@@ -21,3 +21,12 @@ Here are the odds ratios (OR) and 95% confidence intervals (CI) for each of the 
 </p>
 
 The factor with the greatest OR was `Referral`. The odds of me getting an invitation to interview were greater if I had a personal connection to the job. The factor with the second greates OR was `Industry`. My odds of getting an interview were greatest for jobs in an academic setting. And finally, it seems like the greater the minimum and maximum salaries the lower the odds of my application being converted into an interview.
+
+# Time
+Most of my applications (53 out of 55) were eventually rejected, but it sometimes took months to hear back if I heard back at all from the hiring managers. To better understand the timing of rejection, I applied survival analysis to this dataset. The Kaplan-Meier curve (below) shows the probability of my applications "surviving" (i.e., not being rejected) as a function of time from when I submitted the application. For this analysis, I considered any applications still "alive" after 120 days "dead."
+
+<p align="center">
+  <img src="docs/imgs/application_survival.png" width="700" alt="Animated demo">
+</p>
+
+It looks like there is an initial wave of rejections from 0 to around 20 days post-submission and a secondary wave of rejections starting around 50 days post-submission. Interestingly, there seems to be a period between 20 and 50 days post-submission where I stop getting rejection letters for some reason. I suspect this is the time window in which I've made it past some initial screening procedure, but am not immediately being invited to interview.
