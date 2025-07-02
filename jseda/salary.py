@@ -12,10 +12,10 @@ class SalaryRangeFigure():
 
         self.df = pl.read_csv(data)
         self.df = self.df.with_columns(
-            pl.col('Industry').fill_null('Other')
+            pl.col('industry').fill_null('Other')
         )
         self.df = self.df.filter(
-            ~(pl.col("Pay minimum").is_null() & pl.col("Pay maximum").is_null())
+            ~(pl.col("pay_minimum").is_null() & pl.col("pay_maximum").is_null())
         )
 
         return
@@ -27,21 +27,21 @@ class SalaryRangeFigure():
         fig, ax = plt.subplots()
 
         salary_ranges = {}
-        for industry in self.df['Industry'].unique():
-            subset = self.df.filter(self.df['Industry'] == industry)
+        for industry in self.df['industry'].unique():
+            subset = self.df.filter(self.df['industry'] == industry)
             subset = subset.with_columns(
-                pl.col("Pay minimum")
+                pl.col("pay_minimum")
                 .str.replace_all(r"[\$,]", "")   # drop $ and commas
                 .cast(pl.Int64)                  # turn the digits into integers
             )
             subset = subset.with_columns(
-                pl.col("Pay maximum")
+                pl.col("pay_maximum")
                 .str.replace_all(r"[\$,]", "")   # drop $ and commas
                 .cast(pl.Int64)                  # turn the digits into integers
             )
             salary_ranges[industry] = np.vstack([
-                subset['Pay minimum'].to_numpy(),
-                subset['Pay maximum'].to_numpy()
+                subset['pay_minimum'].to_numpy(),
+                subset['pay_maximum'].to_numpy()
             ]).T
 
         #
